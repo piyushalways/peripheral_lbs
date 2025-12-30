@@ -1,0 +1,13 @@
+# Target labels
+ peripheralLBS_ota_flash
+# Source files and their labels
+C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/CMakeFiles/peripheralLBS_ota_flash
+C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/CMakeFiles/peripheralLBS_ota_flash.rule
+C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/CMakeFiles/peripheralLBS_ota_flash-complete.rule
+C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-build.rule
+C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-configure.rule
+C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-download.rule
+C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-install.rule
+C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-mkdir.rule
+C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-patch.rule
+C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-update.rule

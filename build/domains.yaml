@@ -1,0 +1,9 @@
+default: peripheralLBS_ota_flash
+build_dir: C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build
+domains:
+  - name: peripheralLBS_ota_flash
+    build_dir: C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/peripheralLBS_ota_flash
+  - name: mcuboot
+    build_dir: C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/mcuboot
+flash_order:
+  - peripheralLBS_ota_flash

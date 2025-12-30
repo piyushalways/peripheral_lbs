@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/CMakeFiles/peripheralLBS_ota_flash"
+		},
+		{
+			"file" : "C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/CMakeFiles/peripheralLBS_ota_flash.rule"
+		},
+		{
+			"file" : "C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/CMakeFiles/peripheralLBS_ota_flash-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-build.rule"
+		},
+		{
+			"file" : "C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-download.rule"
+		},
+		{
+			"file" : "C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-install.rule"
+		},
+		{
+			"file" : "C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/_sysbuild/sysbuild/images/peripheralLBS_ota_flash-prefix/src/peripheralLBS_ota_flash-stamp/peripheralLBS_ota_flash-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"peripheralLBS_ota_flash"
+		],
+		"name" : "peripheralLBS_ota_flash"
+	}
+}
