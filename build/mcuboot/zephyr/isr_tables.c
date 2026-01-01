@@ -6,550 +6,545 @@
 #include <zephyr/sw_isr_table.h>
 #include <zephyr/arch/cpu.h>
 
-typedef void (* ISR)(const void *);
-uintptr_t __irq_vector_table _irq_vector_table[271] = {
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-	((uintptr_t)&_isr_wrapper),
-};
-struct _isr_table_entry __sw_isr_table _sw_isr_table[271] = {
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 0 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 1 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 2 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 3 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 4 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 5 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 6 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 7 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 8 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 9 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 10 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 11 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 12 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 13 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 14 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 15 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 16 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 17 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 18 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 19 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 20 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 21 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 22 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 23 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 24 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 25 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 26 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 27 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 28 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 29 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 30 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 31 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 32 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 33 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 34 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 35 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 36 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 37 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 38 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 39 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 40 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 41 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 42 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 43 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 44 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 45 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 46 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 47 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 48 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 49 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 50 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 51 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 52 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 53 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 54 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 55 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 56 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 57 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 58 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 59 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 60 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 61 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 62 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 63 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 64 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 65 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 66 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 67 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 68 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 69 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 70 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 71 */
-	{(const void *)0x0, (ISR)0x6879}, /* 72 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 73 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 74 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 75 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 76 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 77 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 78 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 79 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 80 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 81 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 82 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 83 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 84 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 85 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 86 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 87 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 88 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 89 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 90 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 91 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 92 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 93 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 94 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 95 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 96 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 97 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 98 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 99 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 100 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 101 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 102 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 103 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 104 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 105 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 106 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 107 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 108 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 109 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 110 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 111 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 112 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 113 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 114 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 115 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 116 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 117 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 118 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 119 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 120 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 121 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 122 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 123 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 124 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 125 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 126 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 127 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 128 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 129 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 130 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 131 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 132 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 133 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 134 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 135 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 136 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 137 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 138 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 139 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 140 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 141 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 142 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 143 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 144 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 145 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 146 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 147 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 148 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 149 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 150 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 151 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 152 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 153 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 154 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 155 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 156 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 157 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 158 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 159 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 160 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 161 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 162 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 163 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 164 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 165 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 166 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 167 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 168 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 169 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 170 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 171 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 172 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 173 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 174 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 175 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 176 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 177 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 178 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 179 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 180 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 181 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 182 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 183 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 184 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 185 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 186 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 187 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 188 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 189 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 190 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 191 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 192 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 193 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 194 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 195 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 196 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 197 */
-	{(const void *)0x98d4, (ISR)0x7d77}, /* 198 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 199 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 200 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 201 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 202 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 203 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 204 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 205 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 206 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 207 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 208 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 209 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 210 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 211 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 212 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 213 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 214 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 215 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 216 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 217 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 218 */
-	{(const void *)0x40ad, (ISR)0x7ffd}, /* 219 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 220 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 221 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 222 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 223 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 224 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 225 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 226 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 227 */
-	{(const void *)0x4451, (ISR)0x7ffd}, /* 228 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 229 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 230 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 231 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 232 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 233 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 234 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 235 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 236 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 237 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 238 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 239 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 240 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 241 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 242 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 243 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 244 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 245 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 246 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 247 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 248 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 249 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 250 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 251 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 252 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 253 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 254 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 255 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 256 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 257 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 258 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 259 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 260 */
-	{(const void *)0x37a1, (ISR)0x7ffd}, /* 261 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 262 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 263 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 264 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 265 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 266 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 267 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 268 */
-	{(const void *)0x40bd, (ISR)0x7ffd}, /* 269 */
-	{(const void *)0x0, (ISR)z_irq_spurious}, /* 270 */
-};
+_Z_ISR_DIRECT_TABLE_ENTRY(0, _isr_wrapper, ".irq_spurious.0x0");
+_Z_ISR_DIRECT_TABLE_ENTRY(1, _isr_wrapper, ".irq_spurious.0x1");
+_Z_ISR_DIRECT_TABLE_ENTRY(2, _isr_wrapper, ".irq_spurious.0x2");
+_Z_ISR_DIRECT_TABLE_ENTRY(3, _isr_wrapper, ".irq_spurious.0x3");
+_Z_ISR_DIRECT_TABLE_ENTRY(4, _isr_wrapper, ".irq_spurious.0x4");
+_Z_ISR_DIRECT_TABLE_ENTRY(5, _isr_wrapper, ".irq_spurious.0x5");
+_Z_ISR_DIRECT_TABLE_ENTRY(6, _isr_wrapper, ".irq_spurious.0x6");
+_Z_ISR_DIRECT_TABLE_ENTRY(7, _isr_wrapper, ".irq_spurious.0x7");
+_Z_ISR_DIRECT_TABLE_ENTRY(8, _isr_wrapper, ".irq_spurious.0x8");
+_Z_ISR_DIRECT_TABLE_ENTRY(9, _isr_wrapper, ".irq_spurious.0x9");
+_Z_ISR_DIRECT_TABLE_ENTRY(10, _isr_wrapper, ".irq_spurious.0xa");
+_Z_ISR_DIRECT_TABLE_ENTRY(11, _isr_wrapper, ".irq_spurious.0xb");
+_Z_ISR_DIRECT_TABLE_ENTRY(12, _isr_wrapper, ".irq_spurious.0xc");
+_Z_ISR_DIRECT_TABLE_ENTRY(13, _isr_wrapper, ".irq_spurious.0xd");
+_Z_ISR_DIRECT_TABLE_ENTRY(14, _isr_wrapper, ".irq_spurious.0xe");
+_Z_ISR_DIRECT_TABLE_ENTRY(15, _isr_wrapper, ".irq_spurious.0xf");
+_Z_ISR_DIRECT_TABLE_ENTRY(16, _isr_wrapper, ".irq_spurious.0x10");
+_Z_ISR_DIRECT_TABLE_ENTRY(17, _isr_wrapper, ".irq_spurious.0x11");
+_Z_ISR_DIRECT_TABLE_ENTRY(18, _isr_wrapper, ".irq_spurious.0x12");
+_Z_ISR_DIRECT_TABLE_ENTRY(19, _isr_wrapper, ".irq_spurious.0x13");
+_Z_ISR_DIRECT_TABLE_ENTRY(20, _isr_wrapper, ".irq_spurious.0x14");
+_Z_ISR_DIRECT_TABLE_ENTRY(21, _isr_wrapper, ".irq_spurious.0x15");
+_Z_ISR_DIRECT_TABLE_ENTRY(22, _isr_wrapper, ".irq_spurious.0x16");
+_Z_ISR_DIRECT_TABLE_ENTRY(23, _isr_wrapper, ".irq_spurious.0x17");
+_Z_ISR_DIRECT_TABLE_ENTRY(24, _isr_wrapper, ".irq_spurious.0x18");
+_Z_ISR_DIRECT_TABLE_ENTRY(25, _isr_wrapper, ".irq_spurious.0x19");
+_Z_ISR_DIRECT_TABLE_ENTRY(26, _isr_wrapper, ".irq_spurious.0x1a");
+_Z_ISR_DIRECT_TABLE_ENTRY(27, _isr_wrapper, ".irq_spurious.0x1b");
+_Z_ISR_DIRECT_TABLE_ENTRY(28, _isr_wrapper, ".irq_spurious.0x1c");
+_Z_ISR_DIRECT_TABLE_ENTRY(29, _isr_wrapper, ".irq_spurious.0x1d");
+_Z_ISR_DIRECT_TABLE_ENTRY(30, _isr_wrapper, ".irq_spurious.0x1e");
+_Z_ISR_DIRECT_TABLE_ENTRY(31, _isr_wrapper, ".irq_spurious.0x1f");
+_Z_ISR_DIRECT_TABLE_ENTRY(32, _isr_wrapper, ".irq_spurious.0x20");
+_Z_ISR_DIRECT_TABLE_ENTRY(33, _isr_wrapper, ".irq_spurious.0x21");
+_Z_ISR_DIRECT_TABLE_ENTRY(34, _isr_wrapper, ".irq_spurious.0x22");
+_Z_ISR_DIRECT_TABLE_ENTRY(35, _isr_wrapper, ".irq_spurious.0x23");
+_Z_ISR_DIRECT_TABLE_ENTRY(36, _isr_wrapper, ".irq_spurious.0x24");
+_Z_ISR_DIRECT_TABLE_ENTRY(37, _isr_wrapper, ".irq_spurious.0x25");
+_Z_ISR_DIRECT_TABLE_ENTRY(38, _isr_wrapper, ".irq_spurious.0x26");
+_Z_ISR_DIRECT_TABLE_ENTRY(39, _isr_wrapper, ".irq_spurious.0x27");
+_Z_ISR_DIRECT_TABLE_ENTRY(40, _isr_wrapper, ".irq_spurious.0x28");
+_Z_ISR_DIRECT_TABLE_ENTRY(41, _isr_wrapper, ".irq_spurious.0x29");
+_Z_ISR_DIRECT_TABLE_ENTRY(42, _isr_wrapper, ".irq_spurious.0x2a");
+_Z_ISR_DIRECT_TABLE_ENTRY(43, _isr_wrapper, ".irq_spurious.0x2b");
+_Z_ISR_DIRECT_TABLE_ENTRY(44, _isr_wrapper, ".irq_spurious.0x2c");
+_Z_ISR_DIRECT_TABLE_ENTRY(45, _isr_wrapper, ".irq_spurious.0x2d");
+_Z_ISR_DIRECT_TABLE_ENTRY(46, _isr_wrapper, ".irq_spurious.0x2e");
+_Z_ISR_DIRECT_TABLE_ENTRY(47, _isr_wrapper, ".irq_spurious.0x2f");
+_Z_ISR_DIRECT_TABLE_ENTRY(48, _isr_wrapper, ".irq_spurious.0x30");
+_Z_ISR_DIRECT_TABLE_ENTRY(49, _isr_wrapper, ".irq_spurious.0x31");
+_Z_ISR_DIRECT_TABLE_ENTRY(50, _isr_wrapper, ".irq_spurious.0x32");
+_Z_ISR_DIRECT_TABLE_ENTRY(51, _isr_wrapper, ".irq_spurious.0x33");
+_Z_ISR_DIRECT_TABLE_ENTRY(52, _isr_wrapper, ".irq_spurious.0x34");
+_Z_ISR_DIRECT_TABLE_ENTRY(53, _isr_wrapper, ".irq_spurious.0x35");
+_Z_ISR_DIRECT_TABLE_ENTRY(54, _isr_wrapper, ".irq_spurious.0x36");
+_Z_ISR_DIRECT_TABLE_ENTRY(55, _isr_wrapper, ".irq_spurious.0x37");
+_Z_ISR_DIRECT_TABLE_ENTRY(56, _isr_wrapper, ".irq_spurious.0x38");
+_Z_ISR_DIRECT_TABLE_ENTRY(57, _isr_wrapper, ".irq_spurious.0x39");
+_Z_ISR_DIRECT_TABLE_ENTRY(58, _isr_wrapper, ".irq_spurious.0x3a");
+_Z_ISR_DIRECT_TABLE_ENTRY(59, _isr_wrapper, ".irq_spurious.0x3b");
+_Z_ISR_DIRECT_TABLE_ENTRY(60, _isr_wrapper, ".irq_spurious.0x3c");
+_Z_ISR_DIRECT_TABLE_ENTRY(61, _isr_wrapper, ".irq_spurious.0x3d");
+_Z_ISR_DIRECT_TABLE_ENTRY(62, _isr_wrapper, ".irq_spurious.0x3e");
+_Z_ISR_DIRECT_TABLE_ENTRY(63, _isr_wrapper, ".irq_spurious.0x3f");
+_Z_ISR_DIRECT_TABLE_ENTRY(64, _isr_wrapper, ".irq_spurious.0x40");
+_Z_ISR_DIRECT_TABLE_ENTRY(65, _isr_wrapper, ".irq_spurious.0x41");
+_Z_ISR_DIRECT_TABLE_ENTRY(66, _isr_wrapper, ".irq_spurious.0x42");
+_Z_ISR_DIRECT_TABLE_ENTRY(67, _isr_wrapper, ".irq_spurious.0x43");
+_Z_ISR_DIRECT_TABLE_ENTRY(68, _isr_wrapper, ".irq_spurious.0x44");
+_Z_ISR_DIRECT_TABLE_ENTRY(69, _isr_wrapper, ".irq_spurious.0x45");
+_Z_ISR_DIRECT_TABLE_ENTRY(70, _isr_wrapper, ".irq_spurious.0x46");
+_Z_ISR_DIRECT_TABLE_ENTRY(71, _isr_wrapper, ".irq_spurious.0x47");
+_Z_ISR_DIRECT_TABLE_ENTRY(72, _isr_wrapper, ".irq_spurious.0x48");
+_Z_ISR_DIRECT_TABLE_ENTRY(73, _isr_wrapper, ".irq_spurious.0x49");
+_Z_ISR_DIRECT_TABLE_ENTRY(74, _isr_wrapper, ".irq_spurious.0x4a");
+_Z_ISR_DIRECT_TABLE_ENTRY(75, _isr_wrapper, ".irq_spurious.0x4b");
+_Z_ISR_DIRECT_TABLE_ENTRY(76, _isr_wrapper, ".irq_spurious.0x4c");
+_Z_ISR_DIRECT_TABLE_ENTRY(77, _isr_wrapper, ".irq_spurious.0x4d");
+_Z_ISR_DIRECT_TABLE_ENTRY(78, _isr_wrapper, ".irq_spurious.0x4e");
+_Z_ISR_DIRECT_TABLE_ENTRY(79, _isr_wrapper, ".irq_spurious.0x4f");
+_Z_ISR_DIRECT_TABLE_ENTRY(80, _isr_wrapper, ".irq_spurious.0x50");
+_Z_ISR_DIRECT_TABLE_ENTRY(81, _isr_wrapper, ".irq_spurious.0x51");
+_Z_ISR_DIRECT_TABLE_ENTRY(82, _isr_wrapper, ".irq_spurious.0x52");
+_Z_ISR_DIRECT_TABLE_ENTRY(83, _isr_wrapper, ".irq_spurious.0x53");
+_Z_ISR_DIRECT_TABLE_ENTRY(84, _isr_wrapper, ".irq_spurious.0x54");
+_Z_ISR_DIRECT_TABLE_ENTRY(85, _isr_wrapper, ".irq_spurious.0x55");
+_Z_ISR_DIRECT_TABLE_ENTRY(86, _isr_wrapper, ".irq_spurious.0x56");
+_Z_ISR_DIRECT_TABLE_ENTRY(87, _isr_wrapper, ".irq_spurious.0x57");
+_Z_ISR_DIRECT_TABLE_ENTRY(88, _isr_wrapper, ".irq_spurious.0x58");
+_Z_ISR_DIRECT_TABLE_ENTRY(89, _isr_wrapper, ".irq_spurious.0x59");
+_Z_ISR_DIRECT_TABLE_ENTRY(90, _isr_wrapper, ".irq_spurious.0x5a");
+_Z_ISR_DIRECT_TABLE_ENTRY(91, _isr_wrapper, ".irq_spurious.0x5b");
+_Z_ISR_DIRECT_TABLE_ENTRY(92, _isr_wrapper, ".irq_spurious.0x5c");
+_Z_ISR_DIRECT_TABLE_ENTRY(93, _isr_wrapper, ".irq_spurious.0x5d");
+_Z_ISR_DIRECT_TABLE_ENTRY(94, _isr_wrapper, ".irq_spurious.0x5e");
+_Z_ISR_DIRECT_TABLE_ENTRY(95, _isr_wrapper, ".irq_spurious.0x5f");
+_Z_ISR_DIRECT_TABLE_ENTRY(96, _isr_wrapper, ".irq_spurious.0x60");
+_Z_ISR_DIRECT_TABLE_ENTRY(97, _isr_wrapper, ".irq_spurious.0x61");
+_Z_ISR_DIRECT_TABLE_ENTRY(98, _isr_wrapper, ".irq_spurious.0x62");
+_Z_ISR_DIRECT_TABLE_ENTRY(99, _isr_wrapper, ".irq_spurious.0x63");
+_Z_ISR_DIRECT_TABLE_ENTRY(100, _isr_wrapper, ".irq_spurious.0x64");
+_Z_ISR_DIRECT_TABLE_ENTRY(101, _isr_wrapper, ".irq_spurious.0x65");
+_Z_ISR_DIRECT_TABLE_ENTRY(102, _isr_wrapper, ".irq_spurious.0x66");
+_Z_ISR_DIRECT_TABLE_ENTRY(103, _isr_wrapper, ".irq_spurious.0x67");
+_Z_ISR_DIRECT_TABLE_ENTRY(104, _isr_wrapper, ".irq_spurious.0x68");
+_Z_ISR_DIRECT_TABLE_ENTRY(105, _isr_wrapper, ".irq_spurious.0x69");
+_Z_ISR_DIRECT_TABLE_ENTRY(106, _isr_wrapper, ".irq_spurious.0x6a");
+_Z_ISR_DIRECT_TABLE_ENTRY(107, _isr_wrapper, ".irq_spurious.0x6b");
+_Z_ISR_DIRECT_TABLE_ENTRY(108, _isr_wrapper, ".irq_spurious.0x6c");
+_Z_ISR_DIRECT_TABLE_ENTRY(109, _isr_wrapper, ".irq_spurious.0x6d");
+_Z_ISR_DIRECT_TABLE_ENTRY(110, _isr_wrapper, ".irq_spurious.0x6e");
+_Z_ISR_DIRECT_TABLE_ENTRY(111, _isr_wrapper, ".irq_spurious.0x6f");
+_Z_ISR_DIRECT_TABLE_ENTRY(112, _isr_wrapper, ".irq_spurious.0x70");
+_Z_ISR_DIRECT_TABLE_ENTRY(113, _isr_wrapper, ".irq_spurious.0x71");
+_Z_ISR_DIRECT_TABLE_ENTRY(114, _isr_wrapper, ".irq_spurious.0x72");
+_Z_ISR_DIRECT_TABLE_ENTRY(115, _isr_wrapper, ".irq_spurious.0x73");
+_Z_ISR_DIRECT_TABLE_ENTRY(116, _isr_wrapper, ".irq_spurious.0x74");
+_Z_ISR_DIRECT_TABLE_ENTRY(117, _isr_wrapper, ".irq_spurious.0x75");
+_Z_ISR_DIRECT_TABLE_ENTRY(118, _isr_wrapper, ".irq_spurious.0x76");
+_Z_ISR_DIRECT_TABLE_ENTRY(119, _isr_wrapper, ".irq_spurious.0x77");
+_Z_ISR_DIRECT_TABLE_ENTRY(120, _isr_wrapper, ".irq_spurious.0x78");
+_Z_ISR_DIRECT_TABLE_ENTRY(121, _isr_wrapper, ".irq_spurious.0x79");
+_Z_ISR_DIRECT_TABLE_ENTRY(122, _isr_wrapper, ".irq_spurious.0x7a");
+_Z_ISR_DIRECT_TABLE_ENTRY(123, _isr_wrapper, ".irq_spurious.0x7b");
+_Z_ISR_DIRECT_TABLE_ENTRY(124, _isr_wrapper, ".irq_spurious.0x7c");
+_Z_ISR_DIRECT_TABLE_ENTRY(125, _isr_wrapper, ".irq_spurious.0x7d");
+_Z_ISR_DIRECT_TABLE_ENTRY(126, _isr_wrapper, ".irq_spurious.0x7e");
+_Z_ISR_DIRECT_TABLE_ENTRY(127, _isr_wrapper, ".irq_spurious.0x7f");
+_Z_ISR_DIRECT_TABLE_ENTRY(128, _isr_wrapper, ".irq_spurious.0x80");
+_Z_ISR_DIRECT_TABLE_ENTRY(129, _isr_wrapper, ".irq_spurious.0x81");
+_Z_ISR_DIRECT_TABLE_ENTRY(130, _isr_wrapper, ".irq_spurious.0x82");
+_Z_ISR_DIRECT_TABLE_ENTRY(131, _isr_wrapper, ".irq_spurious.0x83");
+_Z_ISR_DIRECT_TABLE_ENTRY(132, _isr_wrapper, ".irq_spurious.0x84");
+_Z_ISR_DIRECT_TABLE_ENTRY(133, _isr_wrapper, ".irq_spurious.0x85");
+_Z_ISR_DIRECT_TABLE_ENTRY(134, _isr_wrapper, ".irq_spurious.0x86");
+_Z_ISR_DIRECT_TABLE_ENTRY(135, _isr_wrapper, ".irq_spurious.0x87");
+_Z_ISR_DIRECT_TABLE_ENTRY(136, _isr_wrapper, ".irq_spurious.0x88");
+_Z_ISR_DIRECT_TABLE_ENTRY(137, _isr_wrapper, ".irq_spurious.0x89");
+_Z_ISR_DIRECT_TABLE_ENTRY(138, _isr_wrapper, ".irq_spurious.0x8a");
+_Z_ISR_DIRECT_TABLE_ENTRY(139, _isr_wrapper, ".irq_spurious.0x8b");
+_Z_ISR_DIRECT_TABLE_ENTRY(140, _isr_wrapper, ".irq_spurious.0x8c");
+_Z_ISR_DIRECT_TABLE_ENTRY(141, _isr_wrapper, ".irq_spurious.0x8d");
+_Z_ISR_DIRECT_TABLE_ENTRY(142, _isr_wrapper, ".irq_spurious.0x8e");
+_Z_ISR_DIRECT_TABLE_ENTRY(143, _isr_wrapper, ".irq_spurious.0x8f");
+_Z_ISR_DIRECT_TABLE_ENTRY(144, _isr_wrapper, ".irq_spurious.0x90");
+_Z_ISR_DIRECT_TABLE_ENTRY(145, _isr_wrapper, ".irq_spurious.0x91");
+_Z_ISR_DIRECT_TABLE_ENTRY(146, _isr_wrapper, ".irq_spurious.0x92");
+_Z_ISR_DIRECT_TABLE_ENTRY(147, _isr_wrapper, ".irq_spurious.0x93");
+_Z_ISR_DIRECT_TABLE_ENTRY(148, _isr_wrapper, ".irq_spurious.0x94");
+_Z_ISR_DIRECT_TABLE_ENTRY(149, _isr_wrapper, ".irq_spurious.0x95");
+_Z_ISR_DIRECT_TABLE_ENTRY(150, _isr_wrapper, ".irq_spurious.0x96");
+_Z_ISR_DIRECT_TABLE_ENTRY(151, _isr_wrapper, ".irq_spurious.0x97");
+_Z_ISR_DIRECT_TABLE_ENTRY(152, _isr_wrapper, ".irq_spurious.0x98");
+_Z_ISR_DIRECT_TABLE_ENTRY(153, _isr_wrapper, ".irq_spurious.0x99");
+_Z_ISR_DIRECT_TABLE_ENTRY(154, _isr_wrapper, ".irq_spurious.0x9a");
+_Z_ISR_DIRECT_TABLE_ENTRY(155, _isr_wrapper, ".irq_spurious.0x9b");
+_Z_ISR_DIRECT_TABLE_ENTRY(156, _isr_wrapper, ".irq_spurious.0x9c");
+_Z_ISR_DIRECT_TABLE_ENTRY(157, _isr_wrapper, ".irq_spurious.0x9d");
+_Z_ISR_DIRECT_TABLE_ENTRY(158, _isr_wrapper, ".irq_spurious.0x9e");
+_Z_ISR_DIRECT_TABLE_ENTRY(159, _isr_wrapper, ".irq_spurious.0x9f");
+_Z_ISR_DIRECT_TABLE_ENTRY(160, _isr_wrapper, ".irq_spurious.0xa0");
+_Z_ISR_DIRECT_TABLE_ENTRY(161, _isr_wrapper, ".irq_spurious.0xa1");
+_Z_ISR_DIRECT_TABLE_ENTRY(162, _isr_wrapper, ".irq_spurious.0xa2");
+_Z_ISR_DIRECT_TABLE_ENTRY(163, _isr_wrapper, ".irq_spurious.0xa3");
+_Z_ISR_DIRECT_TABLE_ENTRY(164, _isr_wrapper, ".irq_spurious.0xa4");
+_Z_ISR_DIRECT_TABLE_ENTRY(165, _isr_wrapper, ".irq_spurious.0xa5");
+_Z_ISR_DIRECT_TABLE_ENTRY(166, _isr_wrapper, ".irq_spurious.0xa6");
+_Z_ISR_DIRECT_TABLE_ENTRY(167, _isr_wrapper, ".irq_spurious.0xa7");
+_Z_ISR_DIRECT_TABLE_ENTRY(168, _isr_wrapper, ".irq_spurious.0xa8");
+_Z_ISR_DIRECT_TABLE_ENTRY(169, _isr_wrapper, ".irq_spurious.0xa9");
+_Z_ISR_DIRECT_TABLE_ENTRY(170, _isr_wrapper, ".irq_spurious.0xaa");
+_Z_ISR_DIRECT_TABLE_ENTRY(171, _isr_wrapper, ".irq_spurious.0xab");
+_Z_ISR_DIRECT_TABLE_ENTRY(172, _isr_wrapper, ".irq_spurious.0xac");
+_Z_ISR_DIRECT_TABLE_ENTRY(173, _isr_wrapper, ".irq_spurious.0xad");
+_Z_ISR_DIRECT_TABLE_ENTRY(174, _isr_wrapper, ".irq_spurious.0xae");
+_Z_ISR_DIRECT_TABLE_ENTRY(175, _isr_wrapper, ".irq_spurious.0xaf");
+_Z_ISR_DIRECT_TABLE_ENTRY(176, _isr_wrapper, ".irq_spurious.0xb0");
+_Z_ISR_DIRECT_TABLE_ENTRY(177, _isr_wrapper, ".irq_spurious.0xb1");
+_Z_ISR_DIRECT_TABLE_ENTRY(178, _isr_wrapper, ".irq_spurious.0xb2");
+_Z_ISR_DIRECT_TABLE_ENTRY(179, _isr_wrapper, ".irq_spurious.0xb3");
+_Z_ISR_DIRECT_TABLE_ENTRY(180, _isr_wrapper, ".irq_spurious.0xb4");
+_Z_ISR_DIRECT_TABLE_ENTRY(181, _isr_wrapper, ".irq_spurious.0xb5");
+_Z_ISR_DIRECT_TABLE_ENTRY(182, _isr_wrapper, ".irq_spurious.0xb6");
+_Z_ISR_DIRECT_TABLE_ENTRY(183, _isr_wrapper, ".irq_spurious.0xb7");
+_Z_ISR_DIRECT_TABLE_ENTRY(184, _isr_wrapper, ".irq_spurious.0xb8");
+_Z_ISR_DIRECT_TABLE_ENTRY(185, _isr_wrapper, ".irq_spurious.0xb9");
+_Z_ISR_DIRECT_TABLE_ENTRY(186, _isr_wrapper, ".irq_spurious.0xba");
+_Z_ISR_DIRECT_TABLE_ENTRY(187, _isr_wrapper, ".irq_spurious.0xbb");
+_Z_ISR_DIRECT_TABLE_ENTRY(188, _isr_wrapper, ".irq_spurious.0xbc");
+_Z_ISR_DIRECT_TABLE_ENTRY(189, _isr_wrapper, ".irq_spurious.0xbd");
+_Z_ISR_DIRECT_TABLE_ENTRY(190, _isr_wrapper, ".irq_spurious.0xbe");
+_Z_ISR_DIRECT_TABLE_ENTRY(191, _isr_wrapper, ".irq_spurious.0xbf");
+_Z_ISR_DIRECT_TABLE_ENTRY(192, _isr_wrapper, ".irq_spurious.0xc0");
+_Z_ISR_DIRECT_TABLE_ENTRY(193, _isr_wrapper, ".irq_spurious.0xc1");
+_Z_ISR_DIRECT_TABLE_ENTRY(194, _isr_wrapper, ".irq_spurious.0xc2");
+_Z_ISR_DIRECT_TABLE_ENTRY(195, _isr_wrapper, ".irq_spurious.0xc3");
+_Z_ISR_DIRECT_TABLE_ENTRY(196, _isr_wrapper, ".irq_spurious.0xc4");
+_Z_ISR_DIRECT_TABLE_ENTRY(197, _isr_wrapper, ".irq_spurious.0xc5");
+_Z_ISR_DIRECT_TABLE_ENTRY(198, _isr_wrapper, ".irq_spurious.0xc6");
+_Z_ISR_DIRECT_TABLE_ENTRY(199, _isr_wrapper, ".irq_spurious.0xc7");
+_Z_ISR_DIRECT_TABLE_ENTRY(200, _isr_wrapper, ".irq_spurious.0xc8");
+_Z_ISR_DIRECT_TABLE_ENTRY(201, _isr_wrapper, ".irq_spurious.0xc9");
+_Z_ISR_DIRECT_TABLE_ENTRY(202, _isr_wrapper, ".irq_spurious.0xca");
+_Z_ISR_DIRECT_TABLE_ENTRY(203, _isr_wrapper, ".irq_spurious.0xcb");
+_Z_ISR_DIRECT_TABLE_ENTRY(204, _isr_wrapper, ".irq_spurious.0xcc");
+_Z_ISR_DIRECT_TABLE_ENTRY(205, _isr_wrapper, ".irq_spurious.0xcd");
+_Z_ISR_DIRECT_TABLE_ENTRY(206, _isr_wrapper, ".irq_spurious.0xce");
+_Z_ISR_DIRECT_TABLE_ENTRY(207, _isr_wrapper, ".irq_spurious.0xcf");
+_Z_ISR_DIRECT_TABLE_ENTRY(208, _isr_wrapper, ".irq_spurious.0xd0");
+_Z_ISR_DIRECT_TABLE_ENTRY(209, _isr_wrapper, ".irq_spurious.0xd1");
+_Z_ISR_DIRECT_TABLE_ENTRY(210, _isr_wrapper, ".irq_spurious.0xd2");
+_Z_ISR_DIRECT_TABLE_ENTRY(211, _isr_wrapper, ".irq_spurious.0xd3");
+_Z_ISR_DIRECT_TABLE_ENTRY(212, _isr_wrapper, ".irq_spurious.0xd4");
+_Z_ISR_DIRECT_TABLE_ENTRY(213, _isr_wrapper, ".irq_spurious.0xd5");
+_Z_ISR_DIRECT_TABLE_ENTRY(214, _isr_wrapper, ".irq_spurious.0xd6");
+_Z_ISR_DIRECT_TABLE_ENTRY(215, _isr_wrapper, ".irq_spurious.0xd7");
+_Z_ISR_DIRECT_TABLE_ENTRY(216, _isr_wrapper, ".irq_spurious.0xd8");
+_Z_ISR_DIRECT_TABLE_ENTRY(217, _isr_wrapper, ".irq_spurious.0xd9");
+_Z_ISR_DIRECT_TABLE_ENTRY(218, _isr_wrapper, ".irq_spurious.0xda");
+_Z_ISR_DIRECT_TABLE_ENTRY(219, _isr_wrapper, ".irq_spurious.0xdb");
+_Z_ISR_DIRECT_TABLE_ENTRY(220, _isr_wrapper, ".irq_spurious.0xdc");
+_Z_ISR_DIRECT_TABLE_ENTRY(221, _isr_wrapper, ".irq_spurious.0xdd");
+_Z_ISR_DIRECT_TABLE_ENTRY(222, _isr_wrapper, ".irq_spurious.0xde");
+_Z_ISR_DIRECT_TABLE_ENTRY(223, _isr_wrapper, ".irq_spurious.0xdf");
+_Z_ISR_DIRECT_TABLE_ENTRY(224, _isr_wrapper, ".irq_spurious.0xe0");
+_Z_ISR_DIRECT_TABLE_ENTRY(225, _isr_wrapper, ".irq_spurious.0xe1");
+_Z_ISR_DIRECT_TABLE_ENTRY(226, _isr_wrapper, ".irq_spurious.0xe2");
+_Z_ISR_DIRECT_TABLE_ENTRY(227, _isr_wrapper, ".irq_spurious.0xe3");
+_Z_ISR_DIRECT_TABLE_ENTRY(228, _isr_wrapper, ".irq_spurious.0xe4");
+_Z_ISR_DIRECT_TABLE_ENTRY(229, _isr_wrapper, ".irq_spurious.0xe5");
+_Z_ISR_DIRECT_TABLE_ENTRY(230, _isr_wrapper, ".irq_spurious.0xe6");
+_Z_ISR_DIRECT_TABLE_ENTRY(231, _isr_wrapper, ".irq_spurious.0xe7");
+_Z_ISR_DIRECT_TABLE_ENTRY(232, _isr_wrapper, ".irq_spurious.0xe8");
+_Z_ISR_DIRECT_TABLE_ENTRY(233, _isr_wrapper, ".irq_spurious.0xe9");
+_Z_ISR_DIRECT_TABLE_ENTRY(234, _isr_wrapper, ".irq_spurious.0xea");
+_Z_ISR_DIRECT_TABLE_ENTRY(235, _isr_wrapper, ".irq_spurious.0xeb");
+_Z_ISR_DIRECT_TABLE_ENTRY(236, _isr_wrapper, ".irq_spurious.0xec");
+_Z_ISR_DIRECT_TABLE_ENTRY(237, _isr_wrapper, ".irq_spurious.0xed");
+_Z_ISR_DIRECT_TABLE_ENTRY(238, _isr_wrapper, ".irq_spurious.0xee");
+_Z_ISR_DIRECT_TABLE_ENTRY(239, _isr_wrapper, ".irq_spurious.0xef");
+_Z_ISR_DIRECT_TABLE_ENTRY(240, _isr_wrapper, ".irq_spurious.0xf0");
+_Z_ISR_DIRECT_TABLE_ENTRY(241, _isr_wrapper, ".irq_spurious.0xf1");
+_Z_ISR_DIRECT_TABLE_ENTRY(242, _isr_wrapper, ".irq_spurious.0xf2");
+_Z_ISR_DIRECT_TABLE_ENTRY(243, _isr_wrapper, ".irq_spurious.0xf3");
+_Z_ISR_DIRECT_TABLE_ENTRY(244, _isr_wrapper, ".irq_spurious.0xf4");
+_Z_ISR_DIRECT_TABLE_ENTRY(245, _isr_wrapper, ".irq_spurious.0xf5");
+_Z_ISR_DIRECT_TABLE_ENTRY(246, _isr_wrapper, ".irq_spurious.0xf6");
+_Z_ISR_DIRECT_TABLE_ENTRY(247, _isr_wrapper, ".irq_spurious.0xf7");
+_Z_ISR_DIRECT_TABLE_ENTRY(248, _isr_wrapper, ".irq_spurious.0xf8");
+_Z_ISR_DIRECT_TABLE_ENTRY(249, _isr_wrapper, ".irq_spurious.0xf9");
+_Z_ISR_DIRECT_TABLE_ENTRY(250, _isr_wrapper, ".irq_spurious.0xfa");
+_Z_ISR_DIRECT_TABLE_ENTRY(251, _isr_wrapper, ".irq_spurious.0xfb");
+_Z_ISR_DIRECT_TABLE_ENTRY(252, _isr_wrapper, ".irq_spurious.0xfc");
+_Z_ISR_DIRECT_TABLE_ENTRY(253, _isr_wrapper, ".irq_spurious.0xfd");
+_Z_ISR_DIRECT_TABLE_ENTRY(254, _isr_wrapper, ".irq_spurious.0xfe");
+_Z_ISR_DIRECT_TABLE_ENTRY(255, _isr_wrapper, ".irq_spurious.0xff");
+_Z_ISR_DIRECT_TABLE_ENTRY(256, _isr_wrapper, ".irq_spurious.0x100");
+_Z_ISR_DIRECT_TABLE_ENTRY(257, _isr_wrapper, ".irq_spurious.0x101");
+_Z_ISR_DIRECT_TABLE_ENTRY(258, _isr_wrapper, ".irq_spurious.0x102");
+_Z_ISR_DIRECT_TABLE_ENTRY(259, _isr_wrapper, ".irq_spurious.0x103");
+_Z_ISR_DIRECT_TABLE_ENTRY(260, _isr_wrapper, ".irq_spurious.0x104");
+_Z_ISR_DIRECT_TABLE_ENTRY(261, _isr_wrapper, ".irq_spurious.0x105");
+_Z_ISR_DIRECT_TABLE_ENTRY(262, _isr_wrapper, ".irq_spurious.0x106");
+_Z_ISR_DIRECT_TABLE_ENTRY(263, _isr_wrapper, ".irq_spurious.0x107");
+_Z_ISR_DIRECT_TABLE_ENTRY(264, _isr_wrapper, ".irq_spurious.0x108");
+_Z_ISR_DIRECT_TABLE_ENTRY(265, _isr_wrapper, ".irq_spurious.0x109");
+_Z_ISR_DIRECT_TABLE_ENTRY(266, _isr_wrapper, ".irq_spurious.0x10a");
+_Z_ISR_DIRECT_TABLE_ENTRY(267, _isr_wrapper, ".irq_spurious.0x10b");
+_Z_ISR_DIRECT_TABLE_ENTRY(268, _isr_wrapper, ".irq_spurious.0x10c");
+_Z_ISR_DIRECT_TABLE_ENTRY(269, _isr_wrapper, ".irq_spurious.0x10d");
+_Z_ISR_DIRECT_TABLE_ENTRY(270, _isr_wrapper, ".irq_spurious.0x10e");
+_Z_ISR_TABLE_ENTRY(0, z_irq_spurious, NULL, ".isr_generated.0x0");
+_Z_ISR_TABLE_ENTRY(1, z_irq_spurious, NULL, ".isr_generated.0x1");
+_Z_ISR_TABLE_ENTRY(2, z_irq_spurious, NULL, ".isr_generated.0x2");
+_Z_ISR_TABLE_ENTRY(3, z_irq_spurious, NULL, ".isr_generated.0x3");
+_Z_ISR_TABLE_ENTRY(4, z_irq_spurious, NULL, ".isr_generated.0x4");
+_Z_ISR_TABLE_ENTRY(5, z_irq_spurious, NULL, ".isr_generated.0x5");
+_Z_ISR_TABLE_ENTRY(6, z_irq_spurious, NULL, ".isr_generated.0x6");
+_Z_ISR_TABLE_ENTRY(7, z_irq_spurious, NULL, ".isr_generated.0x7");
+_Z_ISR_TABLE_ENTRY(8, z_irq_spurious, NULL, ".isr_generated.0x8");
+_Z_ISR_TABLE_ENTRY(9, z_irq_spurious, NULL, ".isr_generated.0x9");
+_Z_ISR_TABLE_ENTRY(10, z_irq_spurious, NULL, ".isr_generated.0xa");
+_Z_ISR_TABLE_ENTRY(11, z_irq_spurious, NULL, ".isr_generated.0xb");
+_Z_ISR_TABLE_ENTRY(12, z_irq_spurious, NULL, ".isr_generated.0xc");
+_Z_ISR_TABLE_ENTRY(13, z_irq_spurious, NULL, ".isr_generated.0xd");
+_Z_ISR_TABLE_ENTRY(14, z_irq_spurious, NULL, ".isr_generated.0xe");
+_Z_ISR_TABLE_ENTRY(15, z_irq_spurious, NULL, ".isr_generated.0xf");
+_Z_ISR_TABLE_ENTRY(16, z_irq_spurious, NULL, ".isr_generated.0x10");
+_Z_ISR_TABLE_ENTRY(17, z_irq_spurious, NULL, ".isr_generated.0x11");
+_Z_ISR_TABLE_ENTRY(18, z_irq_spurious, NULL, ".isr_generated.0x12");
+_Z_ISR_TABLE_ENTRY(19, z_irq_spurious, NULL, ".isr_generated.0x13");
+_Z_ISR_TABLE_ENTRY(20, z_irq_spurious, NULL, ".isr_generated.0x14");
+_Z_ISR_TABLE_ENTRY(21, z_irq_spurious, NULL, ".isr_generated.0x15");
+_Z_ISR_TABLE_ENTRY(22, z_irq_spurious, NULL, ".isr_generated.0x16");
+_Z_ISR_TABLE_ENTRY(23, z_irq_spurious, NULL, ".isr_generated.0x17");
+_Z_ISR_TABLE_ENTRY(24, z_irq_spurious, NULL, ".isr_generated.0x18");
+_Z_ISR_TABLE_ENTRY(25, z_irq_spurious, NULL, ".isr_generated.0x19");
+_Z_ISR_TABLE_ENTRY(26, z_irq_spurious, NULL, ".isr_generated.0x1a");
+_Z_ISR_TABLE_ENTRY(27, z_irq_spurious, NULL, ".isr_generated.0x1b");
+_Z_ISR_TABLE_ENTRY(28, z_irq_spurious, NULL, ".isr_generated.0x1c");
+_Z_ISR_TABLE_ENTRY(29, z_irq_spurious, NULL, ".isr_generated.0x1d");
+_Z_ISR_TABLE_ENTRY(30, z_irq_spurious, NULL, ".isr_generated.0x1e");
+_Z_ISR_TABLE_ENTRY(31, z_irq_spurious, NULL, ".isr_generated.0x1f");
+_Z_ISR_TABLE_ENTRY(32, z_irq_spurious, NULL, ".isr_generated.0x20");
+_Z_ISR_TABLE_ENTRY(33, z_irq_spurious, NULL, ".isr_generated.0x21");
+_Z_ISR_TABLE_ENTRY(34, z_irq_spurious, NULL, ".isr_generated.0x22");
+_Z_ISR_TABLE_ENTRY(35, z_irq_spurious, NULL, ".isr_generated.0x23");
+_Z_ISR_TABLE_ENTRY(36, z_irq_spurious, NULL, ".isr_generated.0x24");
+_Z_ISR_TABLE_ENTRY(37, z_irq_spurious, NULL, ".isr_generated.0x25");
+_Z_ISR_TABLE_ENTRY(38, z_irq_spurious, NULL, ".isr_generated.0x26");
+_Z_ISR_TABLE_ENTRY(39, z_irq_spurious, NULL, ".isr_generated.0x27");
+_Z_ISR_TABLE_ENTRY(40, z_irq_spurious, NULL, ".isr_generated.0x28");
+_Z_ISR_TABLE_ENTRY(41, z_irq_spurious, NULL, ".isr_generated.0x29");
+_Z_ISR_TABLE_ENTRY(42, z_irq_spurious, NULL, ".isr_generated.0x2a");
+_Z_ISR_TABLE_ENTRY(43, z_irq_spurious, NULL, ".isr_generated.0x2b");
+_Z_ISR_TABLE_ENTRY(44, z_irq_spurious, NULL, ".isr_generated.0x2c");
+_Z_ISR_TABLE_ENTRY(45, z_irq_spurious, NULL, ".isr_generated.0x2d");
+_Z_ISR_TABLE_ENTRY(46, z_irq_spurious, NULL, ".isr_generated.0x2e");
+_Z_ISR_TABLE_ENTRY(47, z_irq_spurious, NULL, ".isr_generated.0x2f");
+_Z_ISR_TABLE_ENTRY(48, z_irq_spurious, NULL, ".isr_generated.0x30");
+_Z_ISR_TABLE_ENTRY(49, z_irq_spurious, NULL, ".isr_generated.0x31");
+_Z_ISR_TABLE_ENTRY(50, z_irq_spurious, NULL, ".isr_generated.0x32");
+_Z_ISR_TABLE_ENTRY(51, z_irq_spurious, NULL, ".isr_generated.0x33");
+_Z_ISR_TABLE_ENTRY(52, z_irq_spurious, NULL, ".isr_generated.0x34");
+_Z_ISR_TABLE_ENTRY(53, z_irq_spurious, NULL, ".isr_generated.0x35");
+_Z_ISR_TABLE_ENTRY(54, z_irq_spurious, NULL, ".isr_generated.0x36");
+_Z_ISR_TABLE_ENTRY(55, z_irq_spurious, NULL, ".isr_generated.0x37");
+_Z_ISR_TABLE_ENTRY(56, z_irq_spurious, NULL, ".isr_generated.0x38");
+_Z_ISR_TABLE_ENTRY(57, z_irq_spurious, NULL, ".isr_generated.0x39");
+_Z_ISR_TABLE_ENTRY(58, z_irq_spurious, NULL, ".isr_generated.0x3a");
+_Z_ISR_TABLE_ENTRY(59, z_irq_spurious, NULL, ".isr_generated.0x3b");
+_Z_ISR_TABLE_ENTRY(60, z_irq_spurious, NULL, ".isr_generated.0x3c");
+_Z_ISR_TABLE_ENTRY(61, z_irq_spurious, NULL, ".isr_generated.0x3d");
+_Z_ISR_TABLE_ENTRY(62, z_irq_spurious, NULL, ".isr_generated.0x3e");
+_Z_ISR_TABLE_ENTRY(63, z_irq_spurious, NULL, ".isr_generated.0x3f");
+_Z_ISR_TABLE_ENTRY(64, z_irq_spurious, NULL, ".isr_generated.0x40");
+_Z_ISR_TABLE_ENTRY(65, z_irq_spurious, NULL, ".isr_generated.0x41");
+_Z_ISR_TABLE_ENTRY(66, z_irq_spurious, NULL, ".isr_generated.0x42");
+_Z_ISR_TABLE_ENTRY(67, z_irq_spurious, NULL, ".isr_generated.0x43");
+_Z_ISR_TABLE_ENTRY(68, z_irq_spurious, NULL, ".isr_generated.0x44");
+_Z_ISR_TABLE_ENTRY(69, z_irq_spurious, NULL, ".isr_generated.0x45");
+_Z_ISR_TABLE_ENTRY(70, z_irq_spurious, NULL, ".isr_generated.0x46");
+_Z_ISR_TABLE_ENTRY(71, z_irq_spurious, NULL, ".isr_generated.0x47");
+/* ISR: 72 implemented in app in ".irq.WEST_TOPDIR/nrf/subsys/nrf_security/src/drivers/cracen/sxsymcrypt/src/platform/baremetal/interrupts.c.0" section. */
+_Z_ISR_TABLE_ENTRY(73, z_irq_spurious, NULL, ".isr_generated.0x49");
+/* ISR: 74 implemented in app in ".irq.WEST_TOPDIR/zephyr/drivers/spi/spi_nrfx_spim.c.0" section. */
+_Z_ISR_TABLE_ENTRY(75, z_irq_spurious, NULL, ".isr_generated.0x4b");
+_Z_ISR_TABLE_ENTRY(76, z_irq_spurious, NULL, ".isr_generated.0x4c");
+_Z_ISR_TABLE_ENTRY(77, z_irq_spurious, NULL, ".isr_generated.0x4d");
+_Z_ISR_TABLE_ENTRY(78, z_irq_spurious, NULL, ".isr_generated.0x4e");
+_Z_ISR_TABLE_ENTRY(79, z_irq_spurious, NULL, ".isr_generated.0x4f");
+_Z_ISR_TABLE_ENTRY(80, z_irq_spurious, NULL, ".isr_generated.0x50");
+_Z_ISR_TABLE_ENTRY(81, z_irq_spurious, NULL, ".isr_generated.0x51");
+_Z_ISR_TABLE_ENTRY(82, z_irq_spurious, NULL, ".isr_generated.0x52");
+_Z_ISR_TABLE_ENTRY(83, z_irq_spurious, NULL, ".isr_generated.0x53");
+_Z_ISR_TABLE_ENTRY(84, z_irq_spurious, NULL, ".isr_generated.0x54");
+_Z_ISR_TABLE_ENTRY(85, z_irq_spurious, NULL, ".isr_generated.0x55");
+_Z_ISR_TABLE_ENTRY(86, z_irq_spurious, NULL, ".isr_generated.0x56");
+_Z_ISR_TABLE_ENTRY(87, z_irq_spurious, NULL, ".isr_generated.0x57");
+_Z_ISR_TABLE_ENTRY(88, z_irq_spurious, NULL, ".isr_generated.0x58");
+_Z_ISR_TABLE_ENTRY(89, z_irq_spurious, NULL, ".isr_generated.0x59");
+_Z_ISR_TABLE_ENTRY(90, z_irq_spurious, NULL, ".isr_generated.0x5a");
+_Z_ISR_TABLE_ENTRY(91, z_irq_spurious, NULL, ".isr_generated.0x5b");
+_Z_ISR_TABLE_ENTRY(92, z_irq_spurious, NULL, ".isr_generated.0x5c");
+_Z_ISR_TABLE_ENTRY(93, z_irq_spurious, NULL, ".isr_generated.0x5d");
+_Z_ISR_TABLE_ENTRY(94, z_irq_spurious, NULL, ".isr_generated.0x5e");
+_Z_ISR_TABLE_ENTRY(95, z_irq_spurious, NULL, ".isr_generated.0x5f");
+_Z_ISR_TABLE_ENTRY(96, z_irq_spurious, NULL, ".isr_generated.0x60");
+_Z_ISR_TABLE_ENTRY(97, z_irq_spurious, NULL, ".isr_generated.0x61");
+_Z_ISR_TABLE_ENTRY(98, z_irq_spurious, NULL, ".isr_generated.0x62");
+_Z_ISR_TABLE_ENTRY(99, z_irq_spurious, NULL, ".isr_generated.0x63");
+_Z_ISR_TABLE_ENTRY(100, z_irq_spurious, NULL, ".isr_generated.0x64");
+_Z_ISR_TABLE_ENTRY(101, z_irq_spurious, NULL, ".isr_generated.0x65");
+_Z_ISR_TABLE_ENTRY(102, z_irq_spurious, NULL, ".isr_generated.0x66");
+_Z_ISR_TABLE_ENTRY(103, z_irq_spurious, NULL, ".isr_generated.0x67");
+_Z_ISR_TABLE_ENTRY(104, z_irq_spurious, NULL, ".isr_generated.0x68");
+_Z_ISR_TABLE_ENTRY(105, z_irq_spurious, NULL, ".isr_generated.0x69");
+_Z_ISR_TABLE_ENTRY(106, z_irq_spurious, NULL, ".isr_generated.0x6a");
+_Z_ISR_TABLE_ENTRY(107, z_irq_spurious, NULL, ".isr_generated.0x6b");
+_Z_ISR_TABLE_ENTRY(108, z_irq_spurious, NULL, ".isr_generated.0x6c");
+_Z_ISR_TABLE_ENTRY(109, z_irq_spurious, NULL, ".isr_generated.0x6d");
+_Z_ISR_TABLE_ENTRY(110, z_irq_spurious, NULL, ".isr_generated.0x6e");
+_Z_ISR_TABLE_ENTRY(111, z_irq_spurious, NULL, ".isr_generated.0x6f");
+_Z_ISR_TABLE_ENTRY(112, z_irq_spurious, NULL, ".isr_generated.0x70");
+_Z_ISR_TABLE_ENTRY(113, z_irq_spurious, NULL, ".isr_generated.0x71");
+_Z_ISR_TABLE_ENTRY(114, z_irq_spurious, NULL, ".isr_generated.0x72");
+_Z_ISR_TABLE_ENTRY(115, z_irq_spurious, NULL, ".isr_generated.0x73");
+_Z_ISR_TABLE_ENTRY(116, z_irq_spurious, NULL, ".isr_generated.0x74");
+_Z_ISR_TABLE_ENTRY(117, z_irq_spurious, NULL, ".isr_generated.0x75");
+_Z_ISR_TABLE_ENTRY(118, z_irq_spurious, NULL, ".isr_generated.0x76");
+_Z_ISR_TABLE_ENTRY(119, z_irq_spurious, NULL, ".isr_generated.0x77");
+_Z_ISR_TABLE_ENTRY(120, z_irq_spurious, NULL, ".isr_generated.0x78");
+_Z_ISR_TABLE_ENTRY(121, z_irq_spurious, NULL, ".isr_generated.0x79");
+_Z_ISR_TABLE_ENTRY(122, z_irq_spurious, NULL, ".isr_generated.0x7a");
+_Z_ISR_TABLE_ENTRY(123, z_irq_spurious, NULL, ".isr_generated.0x7b");
+_Z_ISR_TABLE_ENTRY(124, z_irq_spurious, NULL, ".isr_generated.0x7c");
+_Z_ISR_TABLE_ENTRY(125, z_irq_spurious, NULL, ".isr_generated.0x7d");
+_Z_ISR_TABLE_ENTRY(126, z_irq_spurious, NULL, ".isr_generated.0x7e");
+_Z_ISR_TABLE_ENTRY(127, z_irq_spurious, NULL, ".isr_generated.0x7f");
+_Z_ISR_TABLE_ENTRY(128, z_irq_spurious, NULL, ".isr_generated.0x80");
+_Z_ISR_TABLE_ENTRY(129, z_irq_spurious, NULL, ".isr_generated.0x81");
+_Z_ISR_TABLE_ENTRY(130, z_irq_spurious, NULL, ".isr_generated.0x82");
+_Z_ISR_TABLE_ENTRY(131, z_irq_spurious, NULL, ".isr_generated.0x83");
+_Z_ISR_TABLE_ENTRY(132, z_irq_spurious, NULL, ".isr_generated.0x84");
+_Z_ISR_TABLE_ENTRY(133, z_irq_spurious, NULL, ".isr_generated.0x85");
+_Z_ISR_TABLE_ENTRY(134, z_irq_spurious, NULL, ".isr_generated.0x86");
+_Z_ISR_TABLE_ENTRY(135, z_irq_spurious, NULL, ".isr_generated.0x87");
+_Z_ISR_TABLE_ENTRY(136, z_irq_spurious, NULL, ".isr_generated.0x88");
+_Z_ISR_TABLE_ENTRY(137, z_irq_spurious, NULL, ".isr_generated.0x89");
+_Z_ISR_TABLE_ENTRY(138, z_irq_spurious, NULL, ".isr_generated.0x8a");
+_Z_ISR_TABLE_ENTRY(139, z_irq_spurious, NULL, ".isr_generated.0x8b");
+_Z_ISR_TABLE_ENTRY(140, z_irq_spurious, NULL, ".isr_generated.0x8c");
+_Z_ISR_TABLE_ENTRY(141, z_irq_spurious, NULL, ".isr_generated.0x8d");
+_Z_ISR_TABLE_ENTRY(142, z_irq_spurious, NULL, ".isr_generated.0x8e");
+_Z_ISR_TABLE_ENTRY(143, z_irq_spurious, NULL, ".isr_generated.0x8f");
+_Z_ISR_TABLE_ENTRY(144, z_irq_spurious, NULL, ".isr_generated.0x90");
+_Z_ISR_TABLE_ENTRY(145, z_irq_spurious, NULL, ".isr_generated.0x91");
+_Z_ISR_TABLE_ENTRY(146, z_irq_spurious, NULL, ".isr_generated.0x92");
+_Z_ISR_TABLE_ENTRY(147, z_irq_spurious, NULL, ".isr_generated.0x93");
+_Z_ISR_TABLE_ENTRY(148, z_irq_spurious, NULL, ".isr_generated.0x94");
+_Z_ISR_TABLE_ENTRY(149, z_irq_spurious, NULL, ".isr_generated.0x95");
+_Z_ISR_TABLE_ENTRY(150, z_irq_spurious, NULL, ".isr_generated.0x96");
+_Z_ISR_TABLE_ENTRY(151, z_irq_spurious, NULL, ".isr_generated.0x97");
+_Z_ISR_TABLE_ENTRY(152, z_irq_spurious, NULL, ".isr_generated.0x98");
+_Z_ISR_TABLE_ENTRY(153, z_irq_spurious, NULL, ".isr_generated.0x99");
+_Z_ISR_TABLE_ENTRY(154, z_irq_spurious, NULL, ".isr_generated.0x9a");
+_Z_ISR_TABLE_ENTRY(155, z_irq_spurious, NULL, ".isr_generated.0x9b");
+_Z_ISR_TABLE_ENTRY(156, z_irq_spurious, NULL, ".isr_generated.0x9c");
+_Z_ISR_TABLE_ENTRY(157, z_irq_spurious, NULL, ".isr_generated.0x9d");
+_Z_ISR_TABLE_ENTRY(158, z_irq_spurious, NULL, ".isr_generated.0x9e");
+_Z_ISR_TABLE_ENTRY(159, z_irq_spurious, NULL, ".isr_generated.0x9f");
+_Z_ISR_TABLE_ENTRY(160, z_irq_spurious, NULL, ".isr_generated.0xa0");
+_Z_ISR_TABLE_ENTRY(161, z_irq_spurious, NULL, ".isr_generated.0xa1");
+_Z_ISR_TABLE_ENTRY(162, z_irq_spurious, NULL, ".isr_generated.0xa2");
+_Z_ISR_TABLE_ENTRY(163, z_irq_spurious, NULL, ".isr_generated.0xa3");
+_Z_ISR_TABLE_ENTRY(164, z_irq_spurious, NULL, ".isr_generated.0xa4");
+_Z_ISR_TABLE_ENTRY(165, z_irq_spurious, NULL, ".isr_generated.0xa5");
+_Z_ISR_TABLE_ENTRY(166, z_irq_spurious, NULL, ".isr_generated.0xa6");
+_Z_ISR_TABLE_ENTRY(167, z_irq_spurious, NULL, ".isr_generated.0xa7");
+_Z_ISR_TABLE_ENTRY(168, z_irq_spurious, NULL, ".isr_generated.0xa8");
+_Z_ISR_TABLE_ENTRY(169, z_irq_spurious, NULL, ".isr_generated.0xa9");
+_Z_ISR_TABLE_ENTRY(170, z_irq_spurious, NULL, ".isr_generated.0xaa");
+_Z_ISR_TABLE_ENTRY(171, z_irq_spurious, NULL, ".isr_generated.0xab");
+_Z_ISR_TABLE_ENTRY(172, z_irq_spurious, NULL, ".isr_generated.0xac");
+_Z_ISR_TABLE_ENTRY(173, z_irq_spurious, NULL, ".isr_generated.0xad");
+_Z_ISR_TABLE_ENTRY(174, z_irq_spurious, NULL, ".isr_generated.0xae");
+_Z_ISR_TABLE_ENTRY(175, z_irq_spurious, NULL, ".isr_generated.0xaf");
+_Z_ISR_TABLE_ENTRY(176, z_irq_spurious, NULL, ".isr_generated.0xb0");
+_Z_ISR_TABLE_ENTRY(177, z_irq_spurious, NULL, ".isr_generated.0xb1");
+_Z_ISR_TABLE_ENTRY(178, z_irq_spurious, NULL, ".isr_generated.0xb2");
+_Z_ISR_TABLE_ENTRY(179, z_irq_spurious, NULL, ".isr_generated.0xb3");
+_Z_ISR_TABLE_ENTRY(180, z_irq_spurious, NULL, ".isr_generated.0xb4");
+_Z_ISR_TABLE_ENTRY(181, z_irq_spurious, NULL, ".isr_generated.0xb5");
+_Z_ISR_TABLE_ENTRY(182, z_irq_spurious, NULL, ".isr_generated.0xb6");
+_Z_ISR_TABLE_ENTRY(183, z_irq_spurious, NULL, ".isr_generated.0xb7");
+_Z_ISR_TABLE_ENTRY(184, z_irq_spurious, NULL, ".isr_generated.0xb8");
+_Z_ISR_TABLE_ENTRY(185, z_irq_spurious, NULL, ".isr_generated.0xb9");
+_Z_ISR_TABLE_ENTRY(186, z_irq_spurious, NULL, ".isr_generated.0xba");
+_Z_ISR_TABLE_ENTRY(187, z_irq_spurious, NULL, ".isr_generated.0xbb");
+_Z_ISR_TABLE_ENTRY(188, z_irq_spurious, NULL, ".isr_generated.0xbc");
+_Z_ISR_TABLE_ENTRY(189, z_irq_spurious, NULL, ".isr_generated.0xbd");
+_Z_ISR_TABLE_ENTRY(190, z_irq_spurious, NULL, ".isr_generated.0xbe");
+_Z_ISR_TABLE_ENTRY(191, z_irq_spurious, NULL, ".isr_generated.0xbf");
+_Z_ISR_TABLE_ENTRY(192, z_irq_spurious, NULL, ".isr_generated.0xc0");
+_Z_ISR_TABLE_ENTRY(193, z_irq_spurious, NULL, ".isr_generated.0xc1");
+_Z_ISR_TABLE_ENTRY(194, z_irq_spurious, NULL, ".isr_generated.0xc2");
+_Z_ISR_TABLE_ENTRY(195, z_irq_spurious, NULL, ".isr_generated.0xc3");
+_Z_ISR_TABLE_ENTRY(196, z_irq_spurious, NULL, ".isr_generated.0xc4");
+_Z_ISR_TABLE_ENTRY(197, z_irq_spurious, NULL, ".isr_generated.0xc5");
+_Z_ISR_TABLE_ENTRY(198, z_irq_spurious, NULL, ".isr_generated.0xc6");
+_Z_ISR_TABLE_ENTRY(199, z_irq_spurious, NULL, ".isr_generated.0xc7");
+_Z_ISR_TABLE_ENTRY(200, z_irq_spurious, NULL, ".isr_generated.0xc8");
+_Z_ISR_TABLE_ENTRY(201, z_irq_spurious, NULL, ".isr_generated.0xc9");
+_Z_ISR_TABLE_ENTRY(202, z_irq_spurious, NULL, ".isr_generated.0xca");
+_Z_ISR_TABLE_ENTRY(203, z_irq_spurious, NULL, ".isr_generated.0xcb");
+_Z_ISR_TABLE_ENTRY(204, z_irq_spurious, NULL, ".isr_generated.0xcc");
+_Z_ISR_TABLE_ENTRY(205, z_irq_spurious, NULL, ".isr_generated.0xcd");
+_Z_ISR_TABLE_ENTRY(206, z_irq_spurious, NULL, ".isr_generated.0xce");
+_Z_ISR_TABLE_ENTRY(207, z_irq_spurious, NULL, ".isr_generated.0xcf");
+_Z_ISR_TABLE_ENTRY(208, z_irq_spurious, NULL, ".isr_generated.0xd0");
+_Z_ISR_TABLE_ENTRY(209, z_irq_spurious, NULL, ".isr_generated.0xd1");
+_Z_ISR_TABLE_ENTRY(210, z_irq_spurious, NULL, ".isr_generated.0xd2");
+_Z_ISR_TABLE_ENTRY(211, z_irq_spurious, NULL, ".isr_generated.0xd3");
+_Z_ISR_TABLE_ENTRY(212, z_irq_spurious, NULL, ".isr_generated.0xd4");
+_Z_ISR_TABLE_ENTRY(213, z_irq_spurious, NULL, ".isr_generated.0xd5");
+_Z_ISR_TABLE_ENTRY(214, z_irq_spurious, NULL, ".isr_generated.0xd6");
+/* ISR: 215 implemented in app in ".irq.WEST_TOPDIR/zephyr/drivers/sensor/nordic/temp/temp_nrf5.c.0" section. */
+_Z_ISR_TABLE_ENTRY(216, z_irq_spurious, NULL, ".isr_generated.0xd8");
+_Z_ISR_TABLE_ENTRY(217, z_irq_spurious, NULL, ".isr_generated.0xd9");
+_Z_ISR_TABLE_ENTRY(218, z_irq_spurious, NULL, ".isr_generated.0xda");
+/* ISR: 219 implemented in app in ".irq.WEST_TOPDIR/zephyr/drivers/gpio/gpio_nrfx.c.0" section. */
+_Z_ISR_TABLE_ENTRY(220, z_irq_spurious, NULL, ".isr_generated.0xdc");
+_Z_ISR_TABLE_ENTRY(221, z_irq_spurious, NULL, ".isr_generated.0xdd");
+_Z_ISR_TABLE_ENTRY(222, z_irq_spurious, NULL, ".isr_generated.0xde");
+_Z_ISR_TABLE_ENTRY(223, z_irq_spurious, NULL, ".isr_generated.0xdf");
+_Z_ISR_TABLE_ENTRY(224, z_irq_spurious, NULL, ".isr_generated.0xe0");
+_Z_ISR_TABLE_ENTRY(225, z_irq_spurious, NULL, ".isr_generated.0xe1");
+_Z_ISR_TABLE_ENTRY(226, z_irq_spurious, NULL, ".isr_generated.0xe2");
+_Z_ISR_TABLE_ENTRY(227, z_irq_spurious, NULL, ".isr_generated.0xe3");
+/* ISR: 228 implemented in app in ".irq.WEST_TOPDIR/zephyr/drivers/timer/nrf_grtc_timer.c.0" section. */
+_Z_ISR_TABLE_ENTRY(229, z_irq_spurious, NULL, ".isr_generated.0xe5");
+_Z_ISR_TABLE_ENTRY(230, z_irq_spurious, NULL, ".isr_generated.0xe6");
+_Z_ISR_TABLE_ENTRY(231, z_irq_spurious, NULL, ".isr_generated.0xe7");
+_Z_ISR_TABLE_ENTRY(232, z_irq_spurious, NULL, ".isr_generated.0xe8");
+_Z_ISR_TABLE_ENTRY(233, z_irq_spurious, NULL, ".isr_generated.0xe9");
+_Z_ISR_TABLE_ENTRY(234, z_irq_spurious, NULL, ".isr_generated.0xea");
+_Z_ISR_TABLE_ENTRY(235, z_irq_spurious, NULL, ".isr_generated.0xeb");
+_Z_ISR_TABLE_ENTRY(236, z_irq_spurious, NULL, ".isr_generated.0xec");
+_Z_ISR_TABLE_ENTRY(237, z_irq_spurious, NULL, ".isr_generated.0xed");
+_Z_ISR_TABLE_ENTRY(238, z_irq_spurious, NULL, ".isr_generated.0xee");
+_Z_ISR_TABLE_ENTRY(239, z_irq_spurious, NULL, ".isr_generated.0xef");
+_Z_ISR_TABLE_ENTRY(240, z_irq_spurious, NULL, ".isr_generated.0xf0");
+_Z_ISR_TABLE_ENTRY(241, z_irq_spurious, NULL, ".isr_generated.0xf1");
+_Z_ISR_TABLE_ENTRY(242, z_irq_spurious, NULL, ".isr_generated.0xf2");
+_Z_ISR_TABLE_ENTRY(243, z_irq_spurious, NULL, ".isr_generated.0xf3");
+_Z_ISR_TABLE_ENTRY(244, z_irq_spurious, NULL, ".isr_generated.0xf4");
+_Z_ISR_TABLE_ENTRY(245, z_irq_spurious, NULL, ".isr_generated.0xf5");
+_Z_ISR_TABLE_ENTRY(246, z_irq_spurious, NULL, ".isr_generated.0xf6");
+_Z_ISR_TABLE_ENTRY(247, z_irq_spurious, NULL, ".isr_generated.0xf7");
+_Z_ISR_TABLE_ENTRY(248, z_irq_spurious, NULL, ".isr_generated.0xf8");
+_Z_ISR_TABLE_ENTRY(249, z_irq_spurious, NULL, ".isr_generated.0xf9");
+_Z_ISR_TABLE_ENTRY(250, z_irq_spurious, NULL, ".isr_generated.0xfa");
+_Z_ISR_TABLE_ENTRY(251, z_irq_spurious, NULL, ".isr_generated.0xfb");
+_Z_ISR_TABLE_ENTRY(252, z_irq_spurious, NULL, ".isr_generated.0xfc");
+_Z_ISR_TABLE_ENTRY(253, z_irq_spurious, NULL, ".isr_generated.0xfd");
+_Z_ISR_TABLE_ENTRY(254, z_irq_spurious, NULL, ".isr_generated.0xfe");
+_Z_ISR_TABLE_ENTRY(255, z_irq_spurious, NULL, ".isr_generated.0xff");
+_Z_ISR_TABLE_ENTRY(256, z_irq_spurious, NULL, ".isr_generated.0x100");
+_Z_ISR_TABLE_ENTRY(257, z_irq_spurious, NULL, ".isr_generated.0x101");
+_Z_ISR_TABLE_ENTRY(258, z_irq_spurious, NULL, ".isr_generated.0x102");
+_Z_ISR_TABLE_ENTRY(259, z_irq_spurious, NULL, ".isr_generated.0x103");
+_Z_ISR_TABLE_ENTRY(260, z_irq_spurious, NULL, ".isr_generated.0x104");
+/* ISR: 261 implemented in app in ".irq.WEST_TOPDIR/zephyr/drivers/clock_control/clock_control_nrf.c.0" section. */
+_Z_ISR_TABLE_ENTRY(262, z_irq_spurious, NULL, ".isr_generated.0x106");
+_Z_ISR_TABLE_ENTRY(263, z_irq_spurious, NULL, ".isr_generated.0x107");
+_Z_ISR_TABLE_ENTRY(264, z_irq_spurious, NULL, ".isr_generated.0x108");
+_Z_ISR_TABLE_ENTRY(265, z_irq_spurious, NULL, ".isr_generated.0x109");
+_Z_ISR_TABLE_ENTRY(266, z_irq_spurious, NULL, ".isr_generated.0x10a");
+_Z_ISR_TABLE_ENTRY(267, z_irq_spurious, NULL, ".isr_generated.0x10b");
+_Z_ISR_TABLE_ENTRY(268, z_irq_spurious, NULL, ".isr_generated.0x10c");
+/* ISR: 269 implemented in app in ".irq.WEST_TOPDIR/zephyr/drivers/gpio/gpio_nrfx.c.2" section. */
+_Z_ISR_TABLE_ENTRY(270, z_irq_spurious, NULL, ".isr_generated.0x10e");

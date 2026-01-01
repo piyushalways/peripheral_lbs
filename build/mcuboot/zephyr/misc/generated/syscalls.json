@@ -345,194 +345,74 @@
     ],
     [
         [
-            "int uart_err_check",
+            "int sensor_attr_set",
+            "const struct device *dev,\n\t\t\t      enum sensor_channel chan,\n\t\t\t      enum sensor_attribute attr,\n\t\t\t      const struct sensor_value *val"
+        ],
+        "sensor.h",
+        true
+    ],
+    [
+        [
+            "int sensor_attr_get",
+            "const struct device *dev,\n\t\t\t      enum sensor_channel chan,\n\t\t\t      enum sensor_attribute attr,\n\t\t\t      struct sensor_value *val"
+        ],
+        "sensor.h",
+        true
+    ],
+    [
+        [
+            "int sensor_sample_fetch",
             "const struct device *dev"
         ],
-        "uart.h",
+        "sensor.h",
         true
     ],
     [
         [
-            "int uart_poll_in",
-            "const struct device *dev, unsigned char *p_char"
+            "int sensor_sample_fetch_chan",
+            "const struct device *dev,\n\t\t\t\t       enum sensor_channel type"
         ],
-        "uart.h",
+        "sensor.h",
         true
     ],
     [
         [
-            "int uart_poll_in_u16",
-            "const struct device *dev, uint16_t *p_u16"
+            "int sensor_channel_get",
+            "const struct device *dev,\n\t\t\t\t enum sensor_channel chan,\n\t\t\t\t struct sensor_value *val"
         ],
-        "uart.h",
+        "sensor.h",
         true
     ],
     [
         [
-            "void uart_poll_out",
-            "const struct device *dev,\n\t\t\t     unsigned char out_char"
+            "int sensor_get_decoder",
+            "const struct device *dev,\n\t\t\t\t const struct sensor_decoder_api **decoder"
         ],
-        "uart.h",
+        "sensor.h",
         true
     ],
     [
         [
-            "void uart_poll_out_u16",
-            "const struct device *dev, uint16_t out_u16"
+            "int sensor_reconfigure_read_iodev",
+            "struct rtio_iodev *iodev, const struct device *sensor,\n\t\t\t\t\t    const struct sensor_chan_spec *channels,\n\t\t\t\t\t    size_t num_channels"
         ],
-        "uart.h",
+        "sensor.h",
         true
     ],
     [
         [
-            "int uart_configure",
-            "const struct device *dev,\n\t\t\t     const struct uart_config *cfg"
+            "int spi_transceive",
+            "const struct device *dev,\n\t\t\t     const struct spi_config *config,\n\t\t\t     const struct spi_buf_set *tx_bufs,\n\t\t\t     const struct spi_buf_set *rx_bufs"
         ],
-        "uart.h",
+        "spi.h",
         true
     ],
     [
         [
-            "int uart_config_get",
-            "const struct device *dev,\n\t\t\t      struct uart_config *cfg"
+            "int spi_release",
+            "const struct device *dev,\n\t\t\t  const struct spi_config *config"
         ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_tx_enable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_tx_disable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_rx_enable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_rx_disable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_err_enable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_err_disable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_irq_is_pending",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_irq_update",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_tx",
-            "const struct device *dev, const uint8_t *buf,\n\t\t      size_t len,\n\t\t      int32_t timeout"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_tx_u16",
-            "const struct device *dev, const uint16_t *buf,\n\t\t\t  size_t len, int32_t timeout"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_tx_abort",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_rx_enable",
-            "const struct device *dev, uint8_t *buf,\n\t\t\t     size_t len,\n\t\t\t     int32_t timeout"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_rx_enable_u16",
-            "const struct device *dev, uint16_t *buf,\n\t\t\t\t size_t len, int32_t timeout"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_rx_disable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_line_ctrl_set",
-            "const struct device *dev,\n\t\t\t\t uint32_t ctrl, uint32_t val"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_line_ctrl_get",
-            "const struct device *dev, uint32_t ctrl,\n\t\t\t\t uint32_t *val"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_drv_cmd",
-            "const struct device *dev, uint32_t cmd, uint32_t p"
-        ],
-        "uart.h",
+        "spi.h",
         true
     ],
     [
@@ -3209,62 +3089,6 @@
     ],
     [
         [
-            "int sensor_attr_set",
-            "const struct device *dev,\n\t\t\t      enum sensor_channel chan,\n\t\t\t      enum sensor_attribute attr,\n\t\t\t      const struct sensor_value *val"
-        ],
-        "sensor.h",
-        false
-    ],
-    [
-        [
-            "int sensor_attr_get",
-            "const struct device *dev,\n\t\t\t      enum sensor_channel chan,\n\t\t\t      enum sensor_attribute attr,\n\t\t\t      struct sensor_value *val"
-        ],
-        "sensor.h",
-        false
-    ],
-    [
-        [
-            "int sensor_sample_fetch",
-            "const struct device *dev"
-        ],
-        "sensor.h",
-        false
-    ],
-    [
-        [
-            "int sensor_sample_fetch_chan",
-            "const struct device *dev,\n\t\t\t\t       enum sensor_channel type"
-        ],
-        "sensor.h",
-        false
-    ],
-    [
-        [
-            "int sensor_channel_get",
-            "const struct device *dev,\n\t\t\t\t enum sensor_channel chan,\n\t\t\t\t struct sensor_value *val"
-        ],
-        "sensor.h",
-        false
-    ],
-    [
-        [
-            "int sensor_get_decoder",
-            "const struct device *dev,\n\t\t\t\t const struct sensor_decoder_api **decoder"
-        ],
-        "sensor.h",
-        false
-    ],
-    [
-        [
-            "int sensor_reconfigure_read_iodev",
-            "struct rtio_iodev *iodev, const struct device *sensor,\n\t\t\t\t\t    const struct sensor_chan_spec *channels,\n\t\t\t\t\t    size_t num_channels"
-        ],
-        "sensor.h",
-        false
-    ],
-    [
-        [
             "int smbus_configure",
             "const struct device *dev, uint32_t dev_config"
         ],
@@ -3381,22 +3205,6 @@
             "const struct device *dev,\n\t\t\t\tuint16_t addr, uint8_t cmd,\n\t\t\t\tuint8_t snd_count, uint8_t *snd_buf,\n\t\t\t\tuint8_t *rcv_count, uint8_t *rcv_buf"
         ],
         "smbus.h",
-        false
-    ],
-    [
-        [
-            "int spi_transceive",
-            "const struct device *dev,\n\t\t\t     const struct spi_config *config,\n\t\t\t     const struct spi_buf_set *tx_bufs,\n\t\t\t     const struct spi_buf_set *rx_bufs"
-        ],
-        "spi.h",
-        false
-    ],
-    [
-        [
-            "int spi_release",
-            "const struct device *dev,\n\t\t\t  const struct spi_config *config"
-        ],
-        "spi.h",
         false
     ],
     [
@@ -3605,6 +3413,198 @@
             "const struct device *dev, unsigned int ret, unsigned int num_params,\n\t\t\t     struct tee_param *param"
         ],
         "tee.h",
+        false
+    ],
+    [
+        [
+            "int uart_err_check",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_poll_in",
+            "const struct device *dev, unsigned char *p_char"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_poll_in_u16",
+            "const struct device *dev, uint16_t *p_u16"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_poll_out",
+            "const struct device *dev,\n\t\t\t     unsigned char out_char"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_poll_out_u16",
+            "const struct device *dev, uint16_t out_u16"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_configure",
+            "const struct device *dev,\n\t\t\t     const struct uart_config *cfg"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_config_get",
+            "const struct device *dev,\n\t\t\t      struct uart_config *cfg"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_tx_enable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_tx_disable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_rx_enable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_rx_disable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_err_enable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_err_disable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_irq_is_pending",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_irq_update",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_tx",
+            "const struct device *dev, const uint8_t *buf,\n\t\t      size_t len,\n\t\t      int32_t timeout"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_tx_u16",
+            "const struct device *dev, const uint16_t *buf,\n\t\t\t  size_t len, int32_t timeout"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_tx_abort",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_rx_enable",
+            "const struct device *dev, uint8_t *buf,\n\t\t\t     size_t len,\n\t\t\t     int32_t timeout"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_rx_enable_u16",
+            "const struct device *dev, uint16_t *buf,\n\t\t\t\t size_t len, int32_t timeout"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_rx_disable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_line_ctrl_set",
+            "const struct device *dev,\n\t\t\t\t uint32_t ctrl, uint32_t val"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_line_ctrl_get",
+            "const struct device *dev, uint32_t ctrl,\n\t\t\t\t uint32_t *val"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_drv_cmd",
+            "const struct device *dev, uint32_t cmd, uint32_t p"
+        ],
+        "uart.h",
         false
     ],
     [

@@ -53,10 +53,8 @@ FILL(0x00);
 _vector_start = .;
 KEEP(*(.exc_vector_table))
 KEEP(*(".exc_vector_table.*"))
-KEEP(*(.vectors))
+INCLUDE isr_tables_vt.ld
 _vector_end = .;
-. = ALIGN(4);
-KEEP(*(.gnu.linkonce.irq_vector_table*))
  _vector_end = .;
  } > FLASH
     text :
@@ -118,6 +116,8 @@ __device_deps_end = .;
  } > FLASH
 flash_driver_api_area : SUBALIGN(4) { _flash_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._flash_driver_api.static.*))); _flash_driver_api_list_end = .; } > FLASH
 gpio_driver_api_area : SUBALIGN(4) { _gpio_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._gpio_driver_api.static.*))); _gpio_driver_api_list_end = .; } > FLASH
+sensor_driver_api_area : SUBALIGN(4) { _sensor_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._sensor_driver_api.static.*))); _sensor_driver_api_list_end = .; } > FLASH
+spi_driver_api_area : SUBALIGN(4) { _spi_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._spi_driver_api.static.*))); _spi_driver_api_list_end = .; } > FLASH
 shared_irq_driver_api_area : SUBALIGN(4) { _shared_irq_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._shared_irq_driver_api.static.*))); _shared_irq_driver_api_list_end = .; } > FLASH
 crypto_driver_api_area : SUBALIGN(4) { _crypto_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._crypto_driver_api.static.*))); _crypto_driver_api_list_end = .; } > FLASH
 adc_driver_api_area : SUBALIGN(4) { _adc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._adc_driver_api.static.*))); _adc_driver_api_list_end = .; } > FLASH
@@ -172,9 +172,7 @@ reset_driver_api_area : SUBALIGN(4) { _reset_driver_api_list_start = .; KEEP(*(S
 retained_mem_driver_api_area : SUBALIGN(4) { _retained_mem_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._retained_mem_driver_api.static.*))); _retained_mem_driver_api_list_end = .; } > FLASH
 rtc_driver_api_area : SUBALIGN(4) { _rtc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._rtc_driver_api.static.*))); _rtc_driver_api_list_end = .; } > FLASH
 sdhc_driver_api_area : SUBALIGN(4) { _sdhc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._sdhc_driver_api.static.*))); _sdhc_driver_api_list_end = .; } > FLASH
-sensor_driver_api_area : SUBALIGN(4) { _sensor_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._sensor_driver_api.static.*))); _sensor_driver_api_list_end = .; } > FLASH
 smbus_driver_api_area : SUBALIGN(4) { _smbus_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._smbus_driver_api.static.*))); _smbus_driver_api_list_end = .; } > FLASH
-spi_driver_api_area : SUBALIGN(4) { _spi_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._spi_driver_api.static.*))); _spi_driver_api_list_end = .; } > FLASH
 stepper_driver_api_area : SUBALIGN(4) { _stepper_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._stepper_driver_api.static.*))); _stepper_driver_api_list_end = .; } > FLASH
 syscon_driver_api_area : SUBALIGN(4) { _syscon_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._syscon_driver_api.static.*))); _syscon_driver_api_list_end = .; } > FLASH
 tee_driver_api_area : SUBALIGN(4) { _tee_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._tee_driver_api.static.*))); _tee_driver_api_list_end = .; } > FLASH
@@ -242,6 +240,7 @@ ztest :
  *(.rodata)
  *(".rodata.*")
  *(.gnu.linkonce.r.*)
+INCLUDE isr_tables_swi.ld
  . = ALIGN(4);
  } > FLASH
  /DISCARD/ : { *(.eh_frame) }
@@ -330,6 +329,11 @@ PROVIDE(soc_reset_hook = SystemInit);
 {
  KEEP(*(.irq_info*))
  KEEP(*(.intList*))
+}
+/DISCARD/ :
+{
+    KEEP(*(.vectors))
+    KEEP(*(.gnu.linkonce.irq_vector_table*))
 }
  .stab 0 : { *(.stab) }
  .stabstr 0 : { *(.stabstr) }

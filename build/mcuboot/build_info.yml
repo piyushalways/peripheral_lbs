@@ -1,6 +1,6 @@
 cmake:
   application:
-    configuration-dir: C:/ncs/v3.0.1/bootloader/mcuboot/boot/zephyr
+    configuration-dir: C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/sysbuild/mcuboot
     source-dir: C:/ncs/v3.0.1/bootloader/mcuboot/boot/zephyr
   board:
     name: nrf54l15dk
@@ -14,7 +14,7 @@ cmake:
      - C:/ncs/v3.0.1/zephyr/dts/bindings
     files:
      - C:/ncs/v3.0.1/zephyr/boards/nordic/nrf54l15dk/nrf54l15dk_nrf54l15_cpuapp.dts
-     - C:/ncs/v3.0.1/bootloader/mcuboot/boot/zephyr/app.overlay
+     - C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/sysbuild/mcuboot/boards/nrf54l15dk_nrf54l15_cpuapp.overlay
     include-dirs:
      - C:/ncs/v3.0.1/nrf/include
      - C:/ncs/v3.0.1/nrf/dts/common
@@ -36,16 +36,16 @@ cmake:
      - C:/ncs/v3.0.1/zephyr/dts/arc
      - C:/ncs/v3.0.1/zephyr/dts
     user-files:
-     - C:/ncs/v3.0.1/bootloader/mcuboot/boot/zephyr/app.overlay
+     - C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/sysbuild/mcuboot/boards/nrf54l15dk_nrf54l15_cpuapp.overlay
   kconfig:
     files:
      - C:/ncs/v3.0.1/zephyr/boards/nordic/nrf54l15dk/nrf54l15dk_nrf54l15_cpuapp_defconfig
-     - C:/ncs/v3.0.1/bootloader/mcuboot/boot/zephyr/prj.conf
-     - C:/ncs/v3.0.1/bootloader/mcuboot/boot/zephyr/boards/nrf54l15dk_nrf54l15_cpuapp.conf
+     - C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/sysbuild/mcuboot/prj.conf
+     - C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/sysbuild/mcuboot/boards/nrf54l15dk_nrf54l15_cpuapp.conf
      - C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/mcuboot/zephyr/.config.sysbuild
     user-files:
-     - C:/ncs/v3.0.1/bootloader/mcuboot/boot/zephyr/prj.conf
-     - C:/ncs/v3.0.1/bootloader/mcuboot/boot/zephyr/boards/nrf54l15dk_nrf54l15_cpuapp.conf
+     - C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/sysbuild/mcuboot/prj.conf
+     - C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/sysbuild/mcuboot/boards/nrf54l15dk_nrf54l15_cpuapp.conf
   toolchain:
     name: zephyr
     path: C:/ncs/toolchains/0b393f9e1b/opt/zephyr-sdk

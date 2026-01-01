@@ -25,3 +25,4 @@ mcuboot_pad:
   size: 0x800
   placement:
     before: [mcuboot_primary_app]
+    align: {start: 0x1000}

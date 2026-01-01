@@ -30,4 +30,4 @@ empty_file.o: C:/ncs/v3.0.1/zephyr/misc/empty_file.c \
  C:/ncs/v3.0.1/zephyr/boards/nordic/nrf54l15dk/nrf54l_05_10_15_cpuapp_common.dtsi \
  C:/ncs/v3.0.1/zephyr/boards/nordic/nrf54l15dk/nrf54l15dk_common.dtsi \
  C:/ncs/v3.0.1/zephyr/boards/nordic/nrf54l15dk/nrf54l15dk_nrf54l_05_10_15-pinctrl.dtsi \
- C:/ncs/v3.0.1/bootloader/mcuboot/boot/zephyr/app.overlay
+ C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/sysbuild/mcuboot/boards/nrf54l15dk_nrf54l15_cpuapp.overlay

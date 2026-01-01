@@ -38,6 +38,8 @@ mcuboot_pad:
   address: 0xe000
   end_address: 0xe800
   placement:
+    align:
+      start: 0x1000
     before:
     - mcuboot_primary_app
   region: flash_primary

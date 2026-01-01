@@ -270,6 +270,7 @@ C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/peripheralLBS_ota_flash/zephyr
 C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/peripheralLBS_ota_flash/modules/nrf/CMakeFiles/ncs_version_h.dir
 C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/peripheralLBS_ota_flash/modules/nrf/CMakeFiles/ncs_commit_h.dir
 C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/peripheralLBS_ota_flash/modules/nrf/CMakeFiles/zephyr_commit_h.dir
+C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/peripheralLBS_ota_flash/modules/nrf/CMakeFiles/app_commit_h.dir
 C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/peripheralLBS_ota_flash/modules/nrf/CMakeFiles/edit_cache.dir
 C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/peripheralLBS_ota_flash/modules/nrf/CMakeFiles/rebuild_cache.dir
 C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/peripheralLBS_ota_flash/modules/nrf/ext/CMakeFiles/edit_cache.dir

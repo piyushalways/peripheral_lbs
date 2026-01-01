@@ -37,3 +37,10 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "C:/ncs/toolchains/0b393f9e1b/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump.exe")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/mcuboot/zephyr/subsys/logging/backends/cmake_install.cmake")
+  include("C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/mcuboot/zephyr/subsys/logging/frontends/cmake_install.cmake")
+
+endif()
+

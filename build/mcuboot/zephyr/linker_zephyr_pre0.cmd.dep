@@ -81,6 +81,7 @@ linker_zephyr_pre0.cmd: \
  C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/mcuboot/zephyr/include/generated/snippets-sections.ld \
  c:\ncs\v3.0.1\zephyr\soc\nordic\common\arm_platform_init.ld \
  C:/ncs/v3.0.1/zephyr/include/zephyr/linker/intlist.ld \
+ C:/ncs/v3.0.1/zephyr/include/zephyr/linker/isr-local-drop-unused.ld \
  C:/ncs/v3.0.1/zephyr/include/zephyr/linker/debug-sections.ld \
  C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/mcuboot/zephyr/include/generated/snippets-noinit.ld \
  C:/ncs/v3.0.1/zephyr/include/zephyr/linker/ram-end.ld

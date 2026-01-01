@@ -81,6 +81,7 @@ zephyr/linker_zephyr_pre0.cmd: \
   zephyr/include/generated/snippets-sections.ld \
   C:/ncs/v3.0.1/zephyr/soc/nordic/common/arm_platform_init.ld \
   C:/ncs/v3.0.1/zephyr/include/zephyr/linker/intlist.ld \
+  C:/ncs/v3.0.1/zephyr/include/zephyr/linker/isr-local-drop-unused.ld \
   C:/ncs/v3.0.1/zephyr/include/zephyr/linker/debug-sections.ld \
   zephyr/include/generated/snippets-noinit.ld \
   C:/ncs/v3.0.1/zephyr/include/zephyr/linker/ram-end.ld

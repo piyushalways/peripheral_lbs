@@ -44,6 +44,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/mcuboot/modules/nrf/drivers/gpio/cmake_install.cmake")
   include("C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/mcuboot/modules/nrf/drivers/hw_cc3xx/cmake_install.cmake")
   include("C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/mcuboot/modules/nrf/drivers/mpsl/cmake_install.cmake")
+  include("C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/mcuboot/modules/nrf/drivers/sensor/cmake_install.cmake")
   include("C:/Users/Lenovo/nRF/peripheralLBS_ota_flash/build/mcuboot/modules/nrf/drivers/serial/cmake_install.cmake")
 
 endif()

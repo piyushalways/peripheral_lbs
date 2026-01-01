@@ -138,8 +138,8 @@
 			compatible = "mmio-sram";
 			#address-cells = < 0x1 >;
 			#size-cells = < 0x1 >;
-			reg = < 0x20000000 0x2f000 >;
-			ranges = < 0x0 0x20000000 0x2f000 >;
+			reg = < 0x20000000 0x40000 >;
+			ranges = < 0x0 0x20000000 0x40000 >;
 			status = "okay";
 		};
 		global_peripherals: peripheral@50000000 {
@@ -704,7 +704,7 @@
 				compatible = "soc-nv-flash";
 				erase-block-size = < 0x1000 >;
 				write-block-size = < 0x10 >;
-				reg = < 0x0 0x165000 >;
+				reg = < 0x0 0x17d000 >;
 				partitions {
 					compatible = "fixed-partitions";
 					#address-cells = < 0x1 >;
@@ -768,8 +768,9 @@
 		zephyr,flash-controller = &rram_controller;
 		zephyr,flash = &cpuapp_rram;
 		zephyr,ieee802154 = &ieee802154;
-		zephyr,code-partition = &boot_partition;
+		zephyr,code-partition = &slot0_partition;
 		zephyr,sram = &cpuapp_sram;
+		nordic,pm-ext-flash = &mx25r64;
 	};
 	psa_rng: psa-rng {
 		compatible = "zephyr,psa-crypto-rng";
